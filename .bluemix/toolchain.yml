@@ -27,11 +27,12 @@ toolchain:
 
 services:
   chaincode-repo:
-    service_id: hostedgit
+    service_id: github_integrated
     parameters:
       repo_name: '{{toolchain.name}}-cc-repo'
       repo_url: '{{bootstrapRepo}}'
       type: clone
+      private_repo: true
       has_issues: true
       enable_traceability: true
 
